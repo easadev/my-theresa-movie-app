@@ -18,5 +18,5 @@ open http://localhost:3000 in your browser
 The coverage will be available in the coverage folder
 
 ## For Development
-- run in a terminal `npm run build -w` 
+- run in a terminal `npm run build -- -w` 
 - in another terminal `npm run nodemon dist/start`
