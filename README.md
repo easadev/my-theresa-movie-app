@@ -19,4 +19,4 @@ The coverage will be available in the coverage folder
 
 ## For Development
 - run in a terminal `npm run build -- -w` 
-- in another terminal `npm run nodemon dist/start`
+- in another terminal `npm run nodemon dist/start.js`

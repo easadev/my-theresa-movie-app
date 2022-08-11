@@ -19,14 +19,14 @@ export function removeMovieAction(movie) {
 
 export function wishListMovieReducer(wishList = {}, action) {
     const movie = action.payload;
-    switch(action.type) {
+    switch (action.type) {
         case wishListActions.ADD:
             return {
                 ...wishList,
                 [movie.id]: movie,
             }
         case wishListActions.REMOVE:
-            const { [movie.id]: movieToDrop, ...leftMovies } = wishList;
+            const { [movie.id]: _movieToDrop, ...leftMovies } = wishList;
             return leftMovies;
         default:
             return wishList

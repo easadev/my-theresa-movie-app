@@ -10,9 +10,9 @@ it('Tests the wish list reducer', () => {
         initialState,
         addMovieAction(oneMovie)
     );
-    expect(resultingState).toMatchObject({ 1: oneMovie});
+    expect(resultingState).toMatchObject({ 1: oneMovie });
     resultingState = wishListMovieReducer(resultingState, { type: 'unkownAction' });
-    expect(resultingState).toMatchObject({ 1: oneMovie});
+    expect(resultingState).toMatchObject({ 1: oneMovie });
 
     resultingState = wishListMovieReducer(resultingState, addMovieAction(anotherMovie));
 

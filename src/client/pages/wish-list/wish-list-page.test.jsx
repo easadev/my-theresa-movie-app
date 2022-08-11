@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom';
 
 import { WishListPage } from './wish-list-page.jsx';
@@ -7,7 +7,7 @@ import { useWishListManager, WishList } from '../../hooks/use-whishlist'
 import { useState } from 'react';
 
 
-function WishListTest({ inititalList = [] }){
+function WishListTest({ inititalList = [] }) {
     const [wishListState, setWishListState] = useState(inititalList);
     const wishList = useWishListManager(wishListState, setWishListState);
     const onMovieClicked = () => void 0;
@@ -19,7 +19,7 @@ function WishListTest({ inititalList = [] }){
                 <WishListPage onMovieClicked={onMovieClicked} />
             </WishList.Provider>
         </MemoryRouter>
-    </>
+    </>;
 }
 
 it('Tests wish list empty message', () => {

@@ -4,7 +4,7 @@ import { makeRequest } from './api'
 jest.mock('./api', () => {
     return {
         __esModule: true,
-        makeRequest: jest.fn(() => Promise.resolve({ id: 1, title: 'A Movie '}))
+        makeRequest: jest.fn(() => Promise.resolve({ id: 1, title: 'A Movie ' }))
     };
 });
 

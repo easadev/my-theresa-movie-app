@@ -11,9 +11,12 @@ export function getCategoryModifier(category) {
     return modifier || '';
 }
 
-export function MoviePage({ movie }){
+export function MoviePage({ movie }) {
+
     const wishList = useWishList();
     const isInWishList = wishList.isMovieInWishList(movie);
+    const pageModifier = getCategoryModifier(movie.category);
+
     function addToWishList() {
         wishList.addMovieToWishList(movie);
     }
@@ -22,7 +25,12 @@ export function MoviePage({ movie }){
         wishList.removeMovieFromWishList(movie);
     }
 
-    const pageModifier = getCategoryModifier(movie.category);
+    function renderWishListAction() {
+        if (!isInWishList) {
+            return <button type='button' data-ui='action-button' className='button' onClick={addToWishList}>Add to whislist</button>;
+        }
+        return <button type='button' data-ui='action-button' className='button' onClick={removeFromWishList}>Remove from wishlist</button>;
+    }
 
     return <article className={`movie-page ${pageModifier}`}>
         <h1 className='movie-page__title'>{movie.title}</h1>
@@ -31,10 +39,9 @@ export function MoviePage({ movie }){
             <div>
                 <summary className='movie-page__details-content'>{movie.overview}</summary>
                 <div className='movie-page__details-actions'>
-                    { !isInWishList && <button type='button' data-ui='action-button' className='button' onClick={addToWishList}>Add to whislist</button> }
-                    { isInWishList && <button type='button' data-ui='action-button' className='button' onClick={removeFromWishList}>Remove from wishlist</button>}
+                    {renderWishListAction()}
                 </div>
             </div>
         </div>
-    </article>
+    </article>;
 }

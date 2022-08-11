@@ -2,9 +2,9 @@ import { createContext, useContext } from 'react';
 import { wishListMovieReducer, wishListActions } from './wish-list';
 
 export const WishList = createContext({
-    isMovieInWishList(movie){ return false },
-    addMovieToWishList(movie){},
-    removeMovieFromWishList(movie) {},
+    isMovieInWishList(_movie) { return false },
+    addMovieToWishList(_movie) { },
+    removeMovieFromWishList(_movie) { },
     list: [],
 });
 

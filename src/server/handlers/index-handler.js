@@ -1,8 +1,5 @@
-import { getCategories  } from '../movies-api/categories';
-import { renderApp  } from '../renderer.jsx';
-
-
-
+import { getCategories } from '../movies-api/categories';
+import { renderApp } from '../renderer.jsx';
 
 export async function indexHandler(request, reply) {
     const categories = await getCategories();

@@ -36,5 +36,5 @@ export function MovieApp({ initialState }) {
             </main>
         </WishList.Provider>
         </>
-    )
+    );
 }

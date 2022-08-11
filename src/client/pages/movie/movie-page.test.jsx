@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { WishList, useWishListManager } from '../../hooks/use-whishlist';
 import { MoviePage, getCategoryModifier, supportedCategoryModifiers } from './movie-page.jsx';
 
@@ -14,8 +14,8 @@ function TestApp() {
     const [wishListState, setWishListState] = useState({});
     const wishList = useWishListManager(wishListState, setWishListState);
     return (<WishList.Provider value={wishList}>
-                <MoviePage movie={movie} />
-            </WishList.Provider>);
+        <MoviePage movie={movie} />
+    </WishList.Provider>);
 }
 
 it('Makes sures the category modifier is not undefined', () => {
@@ -41,7 +41,7 @@ it('Tests the movie page component', () => {
     });
 
     assertButtonText('Remove from wishlist');
-    
+
 
     act(() => {
         fireEvent.click(screen.getByRole('button'));

@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 
 function MovieCard({ movie }) {
     return <article className='movie-card'>
-       <div className='movie-card__poster'>
-        <MoviePoster posterPath={movie.poster_path} size='w154' alt={movie.original_title} />
-       </div>
-       <div className='movie-card__title'>
+        <div className='movie-card__poster'>
+            <MoviePoster posterPath={movie.poster_path} size='w154' alt={movie.original_title} />
+        </div>
+        <div className='movie-card__title'>
             {movie.title}
-       </div>
+        </div>
     </article>;
 }
 
@@ -35,5 +35,5 @@ export function CarouselCategory({ name, movies, onCarouselMovieClicked }) {
                 </div>
             </div>
         </>
-    )
+    );
 }

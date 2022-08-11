@@ -5,8 +5,8 @@ import { CarouselCategory } from '../../components/carousel-category.jsx';
 export function WishListPage({ onMovieClicked }) {
     const { list } = useWishList();
 
-    if(list.length === 0) {
+    if (list.length === 0) {
         return <h2>Your Wish List is Empty</h2>
     }
-    return <CarouselCategory name='My Wish List' movies={list} onCarouselMovieClicked={onMovieClicked}  />
+    return <CarouselCategory name='My Wish List' movies={list} onCarouselMovieClicked={onMovieClicked} />;
 }

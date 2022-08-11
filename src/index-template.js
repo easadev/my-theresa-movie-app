@@ -1,23 +1,23 @@
 import { makeHtmlAttributes } from '@rollup/plugin-html';
 
-export function indexTemplate({ attributes, bundle, files, publicPath, title, meta }) {
+export function indexTemplate({ attributes, files, publicPath, title, meta }) {
     const scripts = (files.js || [])
         .map(({ fileName }) => {
-        const attrs = makeHtmlAttributes(attributes.script);
-        return `<script src="${publicPath}${fileName}"${attrs}></script>`;
-    }).join('\n');
+            const attrs = makeHtmlAttributes(attributes.script);
+            return `<script src="${publicPath}${fileName}"${attrs}></script>`;
+        }).join('\n');
 
     const links = (files.css || [])
         .map(({ fileName }) => {
-        const attrs = makeHtmlAttributes(attributes.link);
-        return `<link href="${publicPath}${fileName}" rel="stylesheet"${attrs}>`;
-    }).join('\n');
+            const attrs = makeHtmlAttributes(attributes.link);
+            return `<link href="${publicPath}${fileName}" rel="stylesheet"${attrs}>`;
+        }).join('\n');
 
     const metas = meta
         .map((input) => {
-        const attrs = makeHtmlAttributes(input);
-        return `<meta${attrs}>`;
-    }).join('\n');
+            const attrs = makeHtmlAttributes(input);
+            return `<meta${attrs}>`;
+        }).join('\n');
 
 
     return `
