@@ -1,0 +1,30 @@
+@use 'colors';
+
+.movie-card {
+    &__title {
+        color: #fff;
+        transition: color 0.3s ease;
+    }
+}
+
+.carousel {
+    max-width: 100vw;
+    &__name {
+        color: colors.$main-color
+    }
+    &__movies-list {
+        display: flex;
+        overflow-x: auto;
+    }
+    &__movie {
+        a {
+            text-decoration: none;
+           
+        }
+        a:hover .movie-card__title {
+            color: colors.$main-color;
+        }
+        margin-right: 15px;
+    }
+}
+

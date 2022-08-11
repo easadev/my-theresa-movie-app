@@ -1,0 +1,7 @@
+$medium-breakpoint: 1024px;
+
+@mixin medium {
+    @media (min-width: $medium-breakpoint) {
+        @content;
+    }
+}

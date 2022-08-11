@@ -1,0 +1,43 @@
+@use 'colors';
+@use 'responsive';
+.movie-page {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        color: colors.$main-color;
+    }
+    &__details {
+        background-color: #000;
+        padding: 1rem;
+        border-radius: 5px;
+        display: flex;
+    }
+    &__details-content {
+        padding: 0 0.5rem;
+        color: colors.$secondary-color;
+    }
+    &__details-actions {
+        margin-top: 1rem;
+        padding: 0 0.5rem;
+    }
+    @include responsive.medium {
+        max-width: responsive.$medium-breakpoint;
+        margin: 0 auto;
+    }
+}
+
+.movie-page--alternate {
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .movie-page__title {
+        color: #fff;
+    }
+
+    button.button {
+        background-color: #fff;
+        color: colors.$main-color;
+    }
+}

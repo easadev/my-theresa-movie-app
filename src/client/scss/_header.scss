@@ -1,0 +1,64 @@
+@use 'responsive';
+@use 'colors';
+
+$height: 80px;
+
+.header-links {
+    list-style: none;
+    padding: 0;
+    align-self: center;
+    &__link:visited {
+        color: colors.$secondary-color;
+    }
+    &__link:hover {
+        color: colors.$main-color;
+    }
+    
+}
+
+.header-title {
+    text-align: center;
+    align-self: center;
+    font-size: 1.5rem;
+    @include responsive.medium {
+        text-align: left;
+    }
+}
+
+header {
+    display: block;
+    background-color: #2b2b31;
+    z-index: 101;
+    color: colors.$secondary-color;
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
+
+    @include responsive.medium {
+        flex-direction: row;
+        justify-content: center;
+        height: $height;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        & + * {
+            padding-top: $height;
+        }
+        .header-links {
+            display: flex;
+            margin-left: 1rem;
+        }
+
+        .header-links__link {
+            margin-right: 1rem;
+        }
+
+
+    }
+
+}
+
+

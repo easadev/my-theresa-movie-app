@@ -1,0 +1,8 @@
+@use 'colors';
+.button {
+    background-color: colors.$main-color;
+    color: #fff;
+    padding: 10px;
+    border-radius: 30px;
+}
+

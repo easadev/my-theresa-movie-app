@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests Header component mounts fine 1`] = `
+<header>
+  <div
+    className="header-title"
+  >
+    MyTheresa Movie
+  </div>
+  <ul
+    className="header-links"
+  >
+    <li>
+      <a
+        className="header-links__link"
+        href="/"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        className="header-links__link"
+        href="/wish-list"
+        onClick={[Function]}
+      >
+        Wish List
+      </a>
+    </li>
+  </ul>
+</header>
+`;
